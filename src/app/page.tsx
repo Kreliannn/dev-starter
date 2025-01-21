@@ -5,9 +5,12 @@ import { Button } from "@mui/material";
 import {Typography} from "@mui/material";
 
 let backend = [
-  { name : "express", command : "express", img : "https://randomuser.me/api/portraits/men/75.jpg"},
-  { name : "react", command : "react", img : "https://randomuser.me/api/portraits/men/75.jpg"},
-  { name : "axios", command : "axios", img : "https://randomuser.me/api/portraits/men/75.jpg"},
+  { name : "express", command : "express", img : "https://www.pngitem.com/pimgs/m/91-913031_axios-axios-logo-hd-png-download.png"},
+  { name : "passport js", command : "passport-js", img : "https://cdn.glitch.me/project-avatar/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"},
+  { name : "cors", command : "cors", img : "https://images.velog.io/images/leejh96/post/c613f6bd-7ed5-45a7-9c12-f3bcfaa0ec50/227652.png"},
+  { name : "socket io", command : "socket-io", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/2048px-Socket-io.svg.png"},
+  { name : "gemeni api", command : "@google/generative-ai", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s"},
+  { name : "cors", command : "cors", img : "https://images.velog.io/images/leejh96/post/c613f6bd-7ed5-45a7-9c12-f3bcfaa0ec50/227652.png"},
 ]
 
 
@@ -38,7 +41,7 @@ export default function Home() {
             {
               backend.map((library) => {
                 return(
-                <div key={library.name} className="h-28 mt-2 border  bg-white">
+                <div key={library.name} className="h-32 mt-2 border  bg-white">
                   <div className="h-4/6  border">
                       <img src={library.img}  style={{width : "100%", height : "100%"}}/>
                   </div>
