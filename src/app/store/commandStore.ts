@@ -2,26 +2,28 @@ import { create } from "zustand";
 
 type commandType = {
     command : string[],
-    setCommand : (data: string) => void
+    setCommand : (data: string) => void,
     getCommand : () => string
 }
 
 const useCommandStore = create<commandType>((set, get) => ({
-    command : ["react-query", "typescript", "zustand"],
+    command : ["axios", "zustand"],
     setCommand : (data) => {
         set((state) => {
-            let newCommands: string[]
-            if(state.command.includes(data))
-                newCommands = state.command.filter((element: string) => element != data)
+            let newCommands;
+            let commands = state.command
+            if(commands.includes(data))
+                newCommands = commands.filter((elem) => elem != data)
             else
-                newCommands = [...state.command, data]
-
-            return { command : newCommands }
-        })
+                newCommands = [...commands, data]
+            return {
+                command : newCommands
+            }
+        })  
     },
-    getCommand : () => "npm install " + get().command.join(" ")
+    getCommand : () =>  "npm " + get().command.join(" ")
     
-}))
+})) 
 
 
 
