@@ -7,7 +7,7 @@ type commandType = {
 }
 
 const useCommandStore = create<commandType>((set, get) => ({
-    command : ["axios", "zustand"],
+    command : [],
     setCommand : (data) => {
         set((state) => {
             let newCommands;
