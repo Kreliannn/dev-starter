@@ -38,33 +38,25 @@ export default function Home() {
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar">
             
-            <div className="h-28 mt-2 border  ">
+            <div className="h-28 mt-2 border  bg-white">
               <div className="h-4/6  border">
-
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg"  style={{width : "100%", height : "100%"}}/>
               </div>
 
-              <div className="h-2/6  border">
-                  
+              <div className="h-2/6  border flex">
+                  <div className="w-9/12  flex justify-center place-items-center">
+                      <Typography className="text-purple-700"> axios </Typography>
+                  </div>
+
+                  <div className="w-3/12  flex justify-center place-items-center bg-white ">
+                    <Checkbox color="secondary"/>
+                  </div>
               </div>
             </div>
 
-            <div className="h-16 mt-2 border">
-
-            </div>
-
-            <div className="h-16 mt-2 border">
-
-            </div>  
-
-            <div className="h-16 mt-2 border">
-
-            </div>  
-
           </div>
 
-          <div>
-            
-          </div>
+          
         </div>
 
         <div className="border bg-stone-900 h-96  ">
