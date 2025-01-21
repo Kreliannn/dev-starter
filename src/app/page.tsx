@@ -4,12 +4,10 @@ import Checkbox from '@mui/material/Checkbox';
 import { Button } from "@mui/material";
 import {Typography} from "@mui/material";
 
-let choices = [
-  "axios",
-  "zustand",
-  "react-query",
-  "ts-node",
-  "react"
+let backend = [
+  { name : "express", command : "express", img : "https://randomuser.me/api/portraits/men/75.jpg"},
+  { name : "react", command : "react", img : "https://randomuser.me/api/portraits/men/75.jpg"},
+  { name : "axios", command : "axios", img : "https://randomuser.me/api/portraits/men/75.jpg"},
 ]
 
 
@@ -37,23 +35,28 @@ export default function Home() {
           </div>
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar">
+            {
+              backend.map((library) => {
+                return(
+                <div key={library.name} className="h-28 mt-2 border  bg-white">
+                  <div className="h-4/6  border">
+                      <img src={library.img}  style={{width : "100%", height : "100%"}}/>
+                  </div>
+
+                  <div className="h-2/6  border flex">
+                      <div className="w-9/12  flex justify-center place-items-center">
+                          <Typography className="text-purple-700"> {library.name} </Typography>
+                      </div>
+
+                      <div className="w-3/12  flex justify-center place-items-center bg-white ">
+                        <Checkbox color="secondary" onChange={() => checkBox(library.command)}/>
+                      </div>
+                  </div>
+                </div>
+                )
+              })
+            }
             
-            <div className="h-28 mt-2 border  bg-white">
-              <div className="h-4/6  border">
-                  <img src="https://randomuser.me/api/portraits/men/75.jpg"  style={{width : "100%", height : "100%"}}/>
-              </div>
-
-              <div className="h-2/6  border flex">
-                  <div className="w-9/12  flex justify-center place-items-center">
-                      <Typography className="text-purple-700"> axios </Typography>
-                  </div>
-
-                  <div className="w-3/12  flex justify-center place-items-center bg-white ">
-                    <Checkbox color="secondary"/>
-                  </div>
-              </div>
-            </div>
-
           </div>
 
           
