@@ -16,7 +16,7 @@ let backend = [
     { name : "express validaotr", command : "express-validator", img : "https://images.opencollective.com/express-validator/36a8af1/logo/256.png", documentation : "https://express-validator.github.io/docs/"},
     { name : "typescript", command : "typescript", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png", documentation : "https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html"},
     { name : "JWT", command : "jwt", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Pte0L4XLvNqEWXbkCXk_LDN6eSpcaDDLhQ&s", documentation : "https://www.geeksforgeeks.org/jwt-authentication-with-node-js/"},
-    { name : "multer", command : "multer  ", img : "https://miro.medium.com/v2/resize:fit:1400/1*QTZvtnHWanNxBQBynhtlIA.png", documentation : "https://devdocs.io/express-getting-started/"},
+    { name : "multer", command : "multer  ", img : "https://miro.medium.com/v2/resize:fit:1400/1*QTZvtnHWanNxBQBynhtlIA.png", documentation : "https://www.npmjs.com/package/multer"},
   ]
 
 
