@@ -49,11 +49,11 @@ export default function BackendSection()
 
                   <div className="h-2/6   flex " style={{backgroundColor : "#F0F5F9"}}>
                       <div className="w-9/12  flex justify-center place-items-center">
-                          <Typography className=" font-bold text-sm/6 m-3  " style={{lineHeight  : "15px", color : "#191919"}}> {library.name} </Typography>
+                          <Typography className=" font-bold text-sm/6 m-3 text-center " style={{lineHeight  : "15px", color : "#191919"}}> {library.name} </Typography>
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox  onChange={() => checkBox(library.command)}/>
+                        <Checkbox  onChange={() => checkBox(library.command)} color="default"/>
                       </div>
                   </div>
                 </div>

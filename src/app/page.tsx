@@ -3,6 +3,8 @@ import useCommandStore from "./store/commandStore";
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from "@mui/material";
 import {Typography} from "@mui/material";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+
 
 let backend = [
   { name : "express", command : "express", img : "https://img.icons8.com/color/512/express-js.png"},
@@ -34,6 +36,10 @@ export default function Home() {
 
   return (
     <div>
+      <button className="bg-blue-500">
+      dssd
+      Copy
+    </button>
       <br /> <br /> <br /> <br /><br /> <br />
 
       <div className='container  m-auto grid grid-cols- gap-5 sm:grid-cols-3'>
@@ -85,10 +91,12 @@ export default function Home() {
         </div>
 
       </div>
-      
+          
+          
 
       
       <div className='w-11/12 shadow shadow-purple-500 fixed' style={{bottom : "3%", left: "3%"}}>
+          
           <div className="container-fluid bg-stone-800 flex justify-end h-12">
             <Button variant="outlined"> COPY </Button>
           </div>
