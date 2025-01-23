@@ -7,7 +7,7 @@ import {Typography} from "@mui/material";
 import FrontendSection from './components/frontend';
 import BackendSection from './components/backend';
 import DevDependecies from './components/dev-dependencies';
-
+import Navbar from '@/app/navbar';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 export default function Home() {
@@ -16,8 +16,9 @@ export default function Home() {
   console.log(getCommand())
   return (
     <div>
-      <br /> <br /> <br /> <br /><br /> <br />
-
+   
+      <Navbar />
+      <br /> <br /> 
       <div className='container  m-auto grid grid-cols- gap-5 sm:grid-cols-3'>
         <BackendSection />
         <FrontendSection />
