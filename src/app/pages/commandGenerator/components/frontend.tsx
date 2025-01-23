@@ -18,14 +18,12 @@ let backend = [
   ]
 
 
-export default function BackendSection()
+export default function FrontendSection()
 {
 
    
     let setCommand = useCommandStore((state) => state.setCommand)
    
-
-
 
     let checkBox = (command: string): void => {
         setCommand(command)
@@ -35,10 +33,10 @@ export default function BackendSection()
     return(
         <div className="  h-96   rounded overflow-hidden drop-shadow-lg" style={{backgroundColor : "#e1e4e6"}}>
           <div className=" h-1/6 flex justify-center place-items-center bg-black">
-            <Typography variant="h4" className="text-center text-white font-bold"> Backend </Typography>
+            <Typography variant="h4" className="text-center text-black font-bold text-white"> Frontend </Typography>
           </div>
 
-          <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar inset-shadow-sm" >
+          <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar " >
             {
               backend.map((library) => {
                 return(
@@ -53,14 +51,13 @@ export default function BackendSection()
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox  onChange={() => checkBox(library.command)}/>
+                        <Checkbox color="secondary" onChange={() => checkBox(library.command)}/>
                       </div>
                   </div>
                 </div>
                 )
               })
             }
-            <br />
           </div>
         </div>
     )
