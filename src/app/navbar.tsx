@@ -20,8 +20,8 @@ const Navbar = () => {
               <Link href="/" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
                 Home
               </Link>
-              <Link href="/projects" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
-                Projects
+              <Link href="/pages/commandGenerator" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
+                dependencies
               </Link>
               <Link href="/about" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
                 About
