@@ -23,8 +23,8 @@ const Navbar = () => {
               <Link href="/pages/commandGenerator" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
                 dependencies
               </Link>
-              <Link href="/about" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
-                About
+              <Link href="/pages/codeTemplate" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
+                Template
               </Link>
               <Link href="/contact" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
                 Contact

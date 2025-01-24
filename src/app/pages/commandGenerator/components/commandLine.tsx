@@ -10,7 +10,6 @@ import { useState } from 'react';
 
 export default function CommandLine()
 {
-
     let [isCopied, setIsCopied] = useState(false);
     
     let command = useCommandStore((state) => state.command)
@@ -40,7 +39,7 @@ export default function CommandLine()
             </div>
             </div>
             <div className="container-fluid overflow-auto h-12 " style={{backgroundColor : "#1E2022"}}>
-            <h1 className="p-3  text-bold" style={{color : "#C9D6DF"}}> 
+            <h1 className="p-3  font-bold text-sm   tracking-wide" style={{color : "#C9D6DF"}}> 
             {
                 printCommand(getCommand(), getCommandDev())
             }

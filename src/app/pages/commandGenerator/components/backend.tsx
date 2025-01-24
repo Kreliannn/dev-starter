@@ -14,9 +14,13 @@ let backend = [
     { name : "cookie parser", command : "cookie-parser", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIjCGnxYtwOu0H5owyaoSvbof60Y4OQt0vuQ&s", documentation : "https://expressjs.com/id/resources/middleware/cookie-parser.html"},
     { name : "express session", command : "multer  ", img : "https://logovectordl.com/wp-content/uploads/2020/10/session-technologies-usesession-com-logo-vector.png", documentation : "https://www.npmjs.com/package/multer"},
     { name : "express validator", command : "express-validator", img : "https://images.opencollective.com/express-validator/36a8af1/logo/256.png", documentation : "https://express-validator.github.io/docs/"},
+    { name : "doteEnv", command : "multer  ", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHaNT3Fi8RMNUpPDk-Zddeo2FTvDN3Sye5AA&s"},
     { name : "JWT", command : "jwt", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Pte0L4XLvNqEWXbkCXk_LDN6eSpcaDDLhQ&s", documentation : "https://www.geeksforgeeks.org/jwt-authentication-with-node-js/"},
     { name : "multer", command : "multer  ", img : "https://miro.medium.com/v2/resize:fit:1400/1*QTZvtnHWanNxBQBynhtlIA.png", documentation : "https://www.npmjs.com/package/multer"},
+  
   ]
+
+  
 
 export default function BackendSection()
 {
