@@ -1,9 +1,15 @@
+"use client"
 import { express } from "./codes/express"
-
+import { useEffect } from "react"
+import use
 
 
 export default function CodeTemplate()
 {
+    useEffect(() => {
+
+
+    }, [])
 
 
     return(
@@ -12,7 +18,7 @@ export default function CodeTemplate()
                 <div className="container-fluid h-16 " style={{backgroundImage: "linear-gradient(to bottom, black, #1E2022)"}}>
                     
                 </div>
-                <textarea className="w-full h-full   p-2 text-lg p-5" placeholder="Enter your code here..." value={express}></textarea>
+                <textarea className="w-full h-full   p-2 text-lg p-5" placeholder="Enter your code here..." value={}></textarea>
             </div>
         </div>
     )
