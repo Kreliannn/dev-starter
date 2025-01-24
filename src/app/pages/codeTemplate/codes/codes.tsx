@@ -1,5 +1,4 @@
 
-
 export const express =`
 import express from "express"
 import cors from "cors"
@@ -8,14 +7,14 @@ import passport from "passport"
 import mongoose from "mongoose"
 const app = express()
 
-let mongoDb = "yourDatabase"
+let mongoDb = process.env.mongodb
 const PORT = process.env.PORT || 4000;
 
 mongoose.connect(mongoDb).then(() => console.log("connected to database"))
 
 app.set('trust proxy', 1); // Trust the first proxy
 app.use(cors({
-    origin: "https://request-system-frontend.vercel.app",
+    origin: "*",
     credentials : true
 }))
 app.use(express.json())
@@ -76,6 +75,7 @@ if (array_key_exists($requestUri, $routes)) {
     notFound();
 }
 
+//.htaccess codes
 /*
 # Enable Rewrite Engine
 RewriteEngine On
