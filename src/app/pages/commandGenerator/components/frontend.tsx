@@ -35,7 +35,7 @@ export default function FrontendSection()
 
     return(
         <div className="  h-96   rounded overflow-hidden drop-shadow-lg" style={{backgroundColor : "#e1e4e6"}}>
-          <div className=" h-1/6 flex justify-center place-items-center bg-black">
+          <div className=" h-1/6 flex justify-center place-items-center " style={{backgroundImage: "linear-gradient(to bottom, black, #1E2022)"}}>
             <Typography variant="h4" className="text-center text-black font-bold text-white"> Frontend </Typography>
           </div>
 
@@ -50,7 +50,7 @@ export default function FrontendSection()
 
                   <div className="h-2/6   flex " style={{backgroundColor : "#F0F5F9"}}>
                       <div className="w-9/12  flex justify-center place-items-center">
-                          <Typography className=" font-bold text-sm/6 m-3 text-center " style={{lineHeight  : "15px", color : "#191919"}}> {library.name} </Typography>
+                          <Typography variant="subtitle2" className=" font-bold  m-3 text-center  " style={{lineHeight  : "15px", color : "#191919", fontWeight: "bold"}}> {library.name} </Typography>
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
