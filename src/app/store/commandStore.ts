@@ -21,7 +21,7 @@ const useCommandStore = create<commandType>((set, get) => ({
             }
         })  
     },
-    getCommand : () =>  "npm install " + get().command.join(" ")
+    getCommand : () =>  get().command.join(" ")
     
 })) 
 

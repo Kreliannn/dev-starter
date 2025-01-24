@@ -1,34 +1,30 @@
 import { Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
+import useCommandDevStore from "@/app/store/commandDevStore";
 
 let backend = [
+  { name : "typescript", command : "typescript", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png", documentation : ""},
     { name : "nodemon", command : "nodemon", img : "https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png"},
     { name : "eslint", command : "eslint", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNtywX99sgeYPkxEOMr1K2LAaTMeoEE_Ysg&s"},
-    { name : "passport", command : "passport-js", img : "https://cdn.glitch.me/project-avatar/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png"},
-    { name : "cors", command : "cors", img : "https://images.velog.io/images/leejh96/post/c613f6bd-7ed5-45a7-9c12-f3bcfaa0ec50/227652.png"},
-    { name : "socket io", command : "socket-io", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Socket-io.svg/2048px-Socket-io.svg.png"},
-    { name : "gemeni", command : "@google/generative-ai", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThr7qrIazsvZwJuw-uZCtLzIjaAyVW_ZrlEQ&s"},
-    { name : "open ai", command : "openai", img : "https://cdn.worldvectorlogo.com/logos/openai-2.svg"},
-    { name : "axios", command : "axios", img : "https://www.pngitem.com/pimgs/m/91-913031_axios-axios-logo-hd-png-download.png"},
-    { name : "cookie parser", command : "cookie-parser", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIjCGnxYtwOu0H5owyaoSvbof60Y4OQt0vuQ&s"},
-    { name : "express validaotr", command : "express-validator", img : "https://images.opencollective.com/express-validator/36a8af1/logo/256.png"},
-    { name : "JWT", command : "jwt", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Pte0L4XLvNqEWXbkCXk_LDN6eSpcaDDLhQ&s"},
-    { name : "multer", command : "multer  ", img : "https://miro.medium.com/v2/resize:fit:1400/1*QTZvtnHWanNxBQBynhtlIA.png"},
+    { name : "ts-node", command : "ts-node", img : "https://images.seeklogo.com/logo-png/43/3/ts-node-logo-png_seeklogo-434981.png?v=1957829453043056632  "},
+    { name : "@types/ express", command : "cors", img : "https://media.licdn.com/dms/image/D5612AQEIyYUSSkS0Rg/article-cover_image-shrink_720_1280/0/1680742409585?e=2147483647&v=beta&t=zo2zYXAkLe4guONarPO89_GUvRCgdcoc1oLIPxNMVqE"},
+    { name : "@types/ react", command : "socket-io", img : "https://miro.medium.com/v2/resize:fit:800/0*CBjisl422hUyLxiG.png"},
+   
   ]
 
-
+  
 export default function DevDependecies()
 {
 
    
-    let setCommand = useCommandStore((state) => state.setCommand)
+    let setCommandDev = useCommandDevStore((state) => state.setCommandDev)
    
 
 
 
     let checkBox = (command: string): void => {
-        setCommand(command)
+      setCommandDev(command)
     }
 
 
