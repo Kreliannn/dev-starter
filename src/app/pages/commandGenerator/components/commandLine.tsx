@@ -1,5 +1,6 @@
 "use client"
 import useCommandStore from '@/app/store/commandStore';
+import useCommandDevStore from '@/app/store/commandDevStore';
 import Checkbox from '@mui/material/Checkbox';
 import { Button } from "@mui/material";
 import {Typography} from "@mui/material";
@@ -11,14 +12,23 @@ export default function CommandLine()
 {
 
     let [isCopied, setIsCopied] = useState(false);
-
+    
     let command = useCommandStore((state) => state.command)
     let getCommand = useCommandStore((state) => state.getCommand)
+
+    let commandDev = useCommandDevStore((state) => state.commandDev)
+    let getCommandDev = useCommandDevStore((state) => state.getCommandDev)
     
     let copy = (commandText : string) => {
-        navigator.clipboard.writeText(commandText)
+        navigator.clipboard.writeText(printCommand(getCommand(), getCommandDev()))
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1500)
+    }
+
+    let printCommand = (command: string, commandDev: string): string => {
+        let seperator = (command != "" && commandDev != "") ? "; npm install" : "";
+        let devDependecies = (commandDev != "") ? " --save-dev " : "";
+        return "npm install " + command + seperator + devDependecies  + commandDev
     }
 
     return(
@@ -30,7 +40,11 @@ export default function CommandLine()
             </div>
             </div>
             <div className="container-fluid overflow-auto h-12 " style={{backgroundColor : "#1E2022"}}>
-            <h1 className="p-3  text-bold" style={{color : "#C9D6DF"}}> {getCommand()} </h1>
+            <h1 className="p-3  text-bold" style={{color : "#C9D6DF"}}> 
+            {
+                printCommand(getCommand(), getCommandDev())
+            }
+            </ h1>
             </div>
         </div>
     )
