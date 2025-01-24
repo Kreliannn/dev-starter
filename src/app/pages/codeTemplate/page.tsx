@@ -1,25 +1,67 @@
 "use client"
-import { express } from "./codes/express"
+import { express, php } from "./codes/codes"
 import { useEffect } from "react"
-import use
-
+import useCodeTemplateStore from "@/app/store/codeTemplatesStore"
+import {Typography} from "@mui/material";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import CheckIcon from '@mui/icons-material/Check';
+import { useState } from 'react';
 
 export default function CodeTemplate()
 {
-    useEffect(() => {
+    let [isCopied, setIsCopied] = useState(false);
 
+    let codes = useCodeTemplateStore((state) => state.codes)
+    let initialValue = useCodeTemplateStore((state) => state.initialValue)
+    let setExpress = useCodeTemplateStore((state) => state.setExpress)
+    let setPhp = useCodeTemplateStore((state) => state.setPhp)
+    
+    useEffect(() => {
+        initialValue({express : express, php : php})
 
     }, [])
 
-
+    let copy = (commandText : string) => {
+        navigator.clipboard.writeText(commandText)
+        setIsCopied(true)
+        setTimeout(() => setIsCopied(false), 1500)
+    }
+    
+    
     return(
         <div>
-            <div className="mt-5 container m-auto h-96 border bg-stone-200 drop-shadow-lg">
-                <div className="container-fluid h-16 " style={{backgroundImage: "linear-gradient(to bottom, black, #1E2022)"}}>
-                    
+            <br /><br />
+            <div className="container m-auto h-96 border bg-stone-200 drop-shadow-lg">
+                <div className="container-fluid h-16 grid grid-cols-2" style={{backgroundImage: "linear-gradient(to bottom, black, #1E2022)"}}>
+                    <div className="  flex place-items-center ms-5   ">
+                        <Typography variant="h4" className='font-bold text-yellow-600'> Express js </Typography>
+                    </div>
+                    <div className="  flex justify-end">
+                        <div className='flex justify-center place-items-center text-white gap-1  scale-75 hover:bg-stone-200 hover:text-black p-4 rounded' style={{transition : ".5s"}} onClick={() => copy(codes?.express)}>
+                            {(isCopied) ? <CheckIcon /> : <ContentCopyIcon /> }
+                            <Typography variant="h6" className='font-bold'> Copy </Typography>
+                        </div>
+                    </div>
                 </div>
-                <textarea className="w-full h-full   p-2 text-lg p-5" placeholder="Enter your code here..." value={}></textarea>
+                <textarea className="w-full h-full text-stone-700   p-2 text-lg p-5" placeholder="please wait......." value={codes?.express} onChange={(e) =>setExpress(e.target.value) }></textarea>
             </div>
+            <br /> <br /> <br /><br />
+            <div className="container m-auto h-96 border bg-stone-200 drop-shadow-lg">
+                <div className="container-fluid h-16 grid grid-cols-2" style={{backgroundImage: "linear-gradient(to bottom, black, #1E2022)"}}>
+                    <div className="  flex place-items-center ms-5   ">
+                        <Typography variant="h4" className='font-bold text-purple-700'> Php </Typography>
+                    </div>
+                    <div className="  flex justify-end">
+                        <div className='flex justify-center place-items-center text-white gap-1  scale-75 hover:bg-stone-200 hover:text-black p-4 rounded' style={{transition : ".5s"}} onClick={() => copy(codes?.php)}>
+                            {(isCopied) ? <CheckIcon /> : <ContentCopyIcon /> }
+                            <Typography variant="h6" className='font-bold'> Copy </Typography>
+                        </div>
+                    </div>
+                </div>
+                <textarea className="w-full h-full text-stone-700   p-2 text-lg p-5" placeholder="please wait......." value={codes?.php} onChange={(e) =>setPhp(e.target.value) }></textarea>
+            </div>
+
+            <br /><br /><br /><br />
         </div>
     )
 }

@@ -41,3 +41,49 @@ app.get("/",  (request, response)=> {
 
 app.listen(PORT, () => console.log("express server is listening.............."))
 `
+
+
+export const php = `
+<?php
+
+// Define the routes as an associative array
+$routes = [
+    '/' => 'home',
+    '/about' => 'about',
+    '/contact' => 'contact',
+];
+
+// Get the current URL path
+$requestUri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+
+// Function to handle 404 errors
+function notFound() {
+    http_response_code(404);
+    echo "<h1>404 Not Found</h1>";
+    exit;
+}
+
+// Route handling
+if (array_key_exists($requestUri, $routes)) {
+    // Call the corresponding function based on the route
+    $function = $routes[$requestUri];
+    if (function_exists($function)) {
+        $function();
+    } else {
+        notFound();
+    }
+} else {
+    notFound();
+}
+
+/*
+# Enable Rewrite Engine
+RewriteEngine On
+
+# Redirect all requests to index.php if the file or directory doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L]
+*/
+
+`
