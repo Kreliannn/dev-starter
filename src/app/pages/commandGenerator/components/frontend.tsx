@@ -8,6 +8,7 @@ let backend = [
     { name : "material ui", command : "passport-js", img : "https://pbs.twimg.com/profile_images/1798056830041788417/HIapkjDx_400x400.jpg", documentation : "https://mui.com/material-ui/getting-started/"},
     { name : "react query", command : "cors", img : "https://miro.medium.com/v2/resize:fit:1400/1*elhu-42TzQEdsFjKDbQhhA.png", documentation : "https://tanstack.com/query/latest/docs/framework/react/overview"},
     { name : "axios", command : "axios", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqynh9tnAbPVgXfQrvD8vLbktM7S9PPEfeuA&s", documentation : "https://axios-http.com/docs/intro"},
+    { name : "sweet alert 2", command : "react", img : "https://rohit-chouhan.gallerycdn.vsassets.io/extensions/rohit-chouhan/sweetalert2-snippet/1.1.2/1625627316335/Microsoft.VisualStudio.Services.Icons.Default", documentation : "https://react.dev/learn"},
     { name : "react", command : "react", img : "https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png", documentation : "https://react.dev/learn"},
     { name : "MUI icons", command : "openai", img : "https://blogs.purecode.ai/blogs/wp-content/uploads/2023/10/a6aca62b-5471-4921-ab9e-49f26a17b662.png", documentation : ""},
     { name : "redux", command : "redux", img : "https://static-00.iconduck.com/assets.00/redux-icon-2048x1945-ahvhunxp.png", documentation : ""},

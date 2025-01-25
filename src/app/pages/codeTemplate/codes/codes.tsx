@@ -74,7 +74,7 @@ if (array_key_exists($requestUri, $routes)) {
 } else {
     notFound();
 }
-
+3
 //.htaccess codes
 /*
 # Enable Rewrite Engine
