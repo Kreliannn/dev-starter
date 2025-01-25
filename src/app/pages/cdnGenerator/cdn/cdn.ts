@@ -1,4 +1,4 @@
-export const cdn = [
+export const cdnData = [
     {
         img : "https://ncarb.github.io/bootstrap/assets/img/bootstrap-stack.png",
         name : "Bootsrap",
@@ -7,10 +7,12 @@ export const cdn = [
         `,
         documentation : "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
         cdn : `
+            <!-- Bootsrap CSS -->
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0p5gK7xjrp4U05u3B0GUx3TMOgXy4u0IMz78BPCjWIbQkzM2" crossorigin="anonymous">
+            
+            <!-- Bootsrap JS -->
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybDziY39wEn0P1ZfkvzF2z5jz33Jsw2P0p/We6hi+pbLgYp7K" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cuOrtb5tL4gmsVgFhd4z8n1A5nXlYk1yRoqFhF78dhq11Z8pB1uPE8boWkpnK+z9" crossorigin="anonymous"></script>
-
         `
     },
     {
@@ -21,6 +23,7 @@ export const cdn = [
         `,
         documentation : "https://sweetalert2.github.io/",
         cdn : `
+            <!-- SWEET ALERT JS -->
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         `
     },
@@ -32,8 +35,8 @@ export const cdn = [
         `,
         documentation : "https://jquery.com/",
         cdn : `
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEJx3Xx8X2X4K5h8X8A6r4zw8oC6ebD7k8J7Hs6Ds6p4XG5m5F5OU5Xw5Xz5r" crossorigin="anonymous"></script>
-
+            <!-- jQuery JS -->
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEJx3Xx8X2X4K5h8X8A6r4zw8oC6ebD7k8J7Hs6Ds6p4XG5m5F5OU5Xw5Xz5r" crossorigin="anonymous"></script>
         `   
     },
     {
@@ -44,8 +47,11 @@ export const cdn = [
         `,
         documentation : "https://datatables.net/manual/data/",
         cdn : `
-           <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
-           <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+            <!-- Data tables CSS -->
+            <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
+            <!-- Data tables JS -->
+            <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
         `   
     },
     {
@@ -56,9 +62,11 @@ export const cdn = [
         `,
         documentation : "https://leafletjs.com/reference.html",
         cdn : `
-          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-oenpYHrV5Eoppo1bS7fRjZAfxdS+1HJsyP3ldLVQbZE=" crossorigin=""/>
-          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9tNNDbeGHRQ1jDjJ9xyu8AtHVexX6PnvYHkL+6sU9k=" crossorigin=""></script>
-
+            <!-- Leaflet CSS -->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-oenpYHrV5Eoppo1bS7fRjZAfxdS+1HJsyP3ldLVQbZE=" crossorigin=""/>
+            
+            <!-- Leaflet JS -->
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9tNNDbeGHRQ1jDjJ9xyu8AtHVexX6PnvYHkL+6sU9k=" crossorigin=""></script>
         `   
     },
     {
@@ -69,8 +77,8 @@ export const cdn = [
         `,
         documentation : "https://tailwindcss.com/docs/installation/using-vite",
         cdn : `
-           <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-
+            <!-- Tailwind CSS -->
+            <link href="https://cdn.tailwindcss.com" rel="stylesheet">
         `
     },
     {
@@ -81,7 +89,8 @@ export const cdn = [
         `,
         documentation : "https://www.chartjs.org/docs/latest/getting-started/integration.html",
         cdn : `
-         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+            <!-- chart JS -->
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         `   
     },
     {
@@ -92,12 +101,12 @@ export const cdn = [
         `,
         documentation : "https://fullcalendar.io/docs",
         cdn : `
-         <!-- FullCalendar CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
+            <!-- FullCalendar CSS -->
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
 
-        <!-- FullCalendar JS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+            <!-- FullCalendar JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
         `   
     },
 ]

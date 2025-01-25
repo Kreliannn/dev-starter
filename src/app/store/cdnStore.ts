@@ -3,7 +3,7 @@ import { create } from "zustand"
 type cdn = {
     cdn : string[],
     setCdn : (data: string) => void,
-    getCdn : () => string[]
+    getCdn : () => string
 }
 
 let useCdnStore = create<cdn>((set, get) => ({
@@ -19,5 +19,8 @@ let useCdnStore = create<cdn>((set, get) => ({
             return { cdn : newArr }
         })
     },
-    getCdn : () => get().cdn
+    getCdn : () => get().cdn.join(` `)
 }))
+
+
+export default useCdnStore
