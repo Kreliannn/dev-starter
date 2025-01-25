@@ -17,17 +17,17 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-4">
-              <Link href="/" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
+              <Link href="/" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
                 Home
               </Link>
-              <Link href="/pages/commandGenerator" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
-                dependencies
+              <Link href="/pages/commandGenerator" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
+                Dependencies
               </Link>
-              <Link href="/pages/codeTemplate" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
+              <Link href="/pages/cdnGenerator" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
+                CDN
+              </Link>
+              <Link href="/pages/codeTemplate" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
                 Template
-              </Link>
-              <Link href="/contact" className="hover:bg-gray-800 px-3 py-2 rounded-md text-sm font-medium">
-                Contact
               </Link>
             </div>
           </div>
