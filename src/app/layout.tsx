@@ -7,9 +7,7 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-import { ThemeProvider } from "@mui/material/styles"
-import CssBaseline from "@mui/material/CssBaseline"
-import theme from "./theme"
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -31,11 +29,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-whi` } style={{backgroundColor : "#F0F5F9"}}
       >
-        <ThemeProvider theme={theme}>
-        <CssBaseline />
         <Navbar />
         {children}
-        </ThemeProvider>
       </body>
     </html>
   );
