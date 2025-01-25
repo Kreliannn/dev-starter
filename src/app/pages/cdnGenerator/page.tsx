@@ -1,17 +1,6 @@
-
-let cdn = [
-    {
-        img : "https://rohit-chouhan.gallerycdn.vsassets.io/extensions/rohit-chouhan/sweetalert2-snippet/1.1.2/1625627316335/Microsoft.VisualStudio.Services.Icons.Default",
-        name : "sweet alert 2",
-        description : `
-            SweetAlert2 is a JavaScript library used for creating stylish, customizable, and responsive alert dialogs. It replaces the default browser alerts, confirmations, and prompts with beautiful, animated modal popups. The library is lightweight, easy to integrate, and provides a much better user experience.
-        `,
-        documentation : "https://sweetalert2.github.io/",
-        cdn : `
-            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        `
-    },
-]
+"use client"
+import Checkbox from '@mui/material/Checkbox';
+import { cdn } from './cdn/cdn';
 
 export default function CdnGenerator()
 {
@@ -28,25 +17,28 @@ export default function CdnGenerator()
                     {
                         cdn.map((cdn) => {
                             return(
-                                <div key={cdn.name} className="h-28  flex justify-center border container ">
+                                <div key={cdn.name} className="h-28 flex justify-center  container bg-gray-200" >
 
-                                    <div className=" border border-black h-100  container" style={{ width : "20%"}}>
-                                        <img src={cdn.img} alt="" />
+                                    <div className="border border-stone-400 container bg-white flex justify-center items-center" style={{ width: "20%" }}>
+                                        <img src={cdn.img} alt="" className="h-full w-full object-contain" />
                                     </div>
 
-                                    <div className=" border border-black h-100 container" style={{ width : "50%"}}>
-                                        <h1> {cdn.name} </h1>
+                                    <div className="border border-stone-400 container flex items-center justify-center text-center font-bold text-3xl" style={{ width: "50%" }}>
+                                        <h1>{cdn.name}</h1>
                                     </div>
 
-                                    <div className=" border border-black h-100 container " style={{ width : "80%"}}>
-                                        <p>{cdn.description}</p>
+                                    <div className="border border-stone-400 container p-2 overflow-auto hide-scrollbar" style={{ width: "80%" }}>
+                                        <p>
+                                        <span className="font-bold">Description:</span> <span className="text-xs text-gray-800"> {cdn.description} </span>
+                                        </p>
                                     </div>
 
-                                    <div className="border border-black h-100  container" style={{ width : "20%"}}>
-
+                                    <div className="border border-stone-400 container flex justify-center place-items-center" style={{ width: "20%" }}>
+                                        <Checkbox size="large" />
                                     </div>
-                                
-                                </div>                           
+
+                                </div>
+                        
                             )
                         })
                     }
