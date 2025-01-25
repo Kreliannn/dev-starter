@@ -19,8 +19,8 @@ export default function CdnGenerator()
                             return(
                                 <div key={cdn.name} className="h-28 flex justify-center  container bg-gray-200" >
 
-                                    <div className="border border-stone-400 container bg-white flex justify-center items-center" style={{ width: "20%" }}>
-                                        <img src={cdn.img} alt="" className="h-full w-full object-contain" />
+                                    <div className="border border-stone-400 container bg-white flex justify-center items-center overflow-hidden " style={{ width: "20%" }}>
+                                        <img src={cdn.img} alt="" className="h-full w-full object-contain scale-75 transition hover:scale-100" />
                                     </div>
 
                                     <div className="border border-stone-400 container flex items-center justify-center text-center font-bold text-3xl" style={{ width: "50%" }}>

@@ -4,7 +4,7 @@ import useCommandStore from "@/app/store/commandStore";
 
 let backend = [
     { name : "tailwind", command : "tailwind", img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png", documentation : "https://tailwindcss.com/docs/installation/using-vite"},
-    { name : "bootsrap", command : "bootsrap", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64cO7dEoEn8AAsW6oJQM1OnKZU4ND8gGUe0EqtPyr7Ofx5EfljQHDwrqlPZKZEN5AMyI&usqp=CAU", documentation : "https://getbootstrap.com/docs/4.1/getting-started/introduction/"},
+    { name : "bootsrap", command : "bootsrap", img : "https://ncarb.github.io/bootstrap/assets/img/bootstrap-stack.png", documentation : "https://getbootstrap.com/docs/4.1/getting-started/introduction/"},
     { name : "material ui", command : "passport-js", img : "https://pbs.twimg.com/profile_images/1798056830041788417/HIapkjDx_400x400.jpg", documentation : "https://mui.com/material-ui/getting-started/"},
     { name : "react query", command : "cors", img : "https://miro.medium.com/v2/resize:fit:1400/1*elhu-42TzQEdsFjKDbQhhA.png", documentation : "https://tanstack.com/query/latest/docs/framework/react/overview"},
     { name : "axios", command : "axios", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqynh9tnAbPVgXfQrvD8vLbktM7S9PPEfeuA&s", documentation : "https://axios-http.com/docs/intro"},

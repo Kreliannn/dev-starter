@@ -1,5 +1,31 @@
 export const cdn = [
     {
+        img : "https://ncarb.github.io/bootstrap/assets/img/bootstrap-stack.png",
+        name : "Bootsrap",
+        description : `
+            Bootstrap is a popular open-source CSS framework for developing responsive, mobile-first web pages. It includes pre-designed components like buttons, forms, navigation bars, and modals, which you can easily customize and use in your projects.
+        `,
+        documentation : "https://getbootstrap.com/docs/5.3/getting-started/introduction/",
+        cdn : `
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-pzjw8f+ua7Kw1TIq0p5gK7xjrp4U05u3B0GUx3TMOgXy4u0IMz78BPCjWIbQkzM2" crossorigin="anonymous">
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybDziY39wEn0P1ZfkvzF2z5jz33Jsw2P0p/We6hi+pbLgYp7K" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cuOrtb5tL4gmsVgFhd4z8n1A5nXlYk1yRoqFhF78dhq11Z8pB1uPE8boWkpnK+z9" crossorigin="anonymous"></script>
+
+        `
+    },
+    {
+        img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png",
+        name : "tailwind",
+        description : `         
+           Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without having to write custom CSS. Unlike traditional CSS frameworks that offer predefined components, Tailwind gives you a collection of utility classes for controlling layout, spacing, typography, colors, and more, allowing you to design directly in HTML.
+        `,
+        documentation : "https://tailwindcss.com/docs/installation/using-vite",
+        cdn : `
+           <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+
+        `
+    },
+    {
         img : "https://rohit-chouhan.gallerycdn.vsassets.io/extensions/rohit-chouhan/sweetalert2-snippet/1.1.2/1625627316335/Microsoft.VisualStudio.Services.Icons.Default",
         name : "sweet alert 2",
         description : `
@@ -46,6 +72,33 @@ export const cdn = [
          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         `   
     },
-]
+    {
+        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLME0hpAJOqBGhaVjcgkk8hIKS3S4GAqrLg&s",
+        name : "jQuery",
+        description : `      
+           jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, and animation, making it easier to work with JavaScript on websites.
+        `,
+        documentation : "https://jquery.com/",
+        cdn : `
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEJx3Xx8X2X4K5h8X8A6r4zw8oC6ebD7k8J7Hs6Ds6p4XG5m5F5OU5Xw5Xz5r" crossorigin="anonymous"></script>
 
+        `   
+    },
+    {
+        img : "https://avatars.githubusercontent.com/u/13825204?v=4",
+        name : "Full Calendar",
+        description : `      
+           FullCalendar is a powerful, flexible, and highly customizable JavaScript library for displaying and managing calendar views. It allows you to create a feature-rich calendar interface, capable of handling a variety of use cases, including event management, scheduling, and displaying events in monthly, weekly, or daily views.
+        `,
+        documentation : "https://fullcalendar.io/docs",
+        cdn : `
+         <!-- FullCalendar CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
+
+        <!-- FullCalendar JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+        `   
+    },
+]
 
