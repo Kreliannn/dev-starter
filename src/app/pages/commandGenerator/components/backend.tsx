@@ -29,7 +29,7 @@ export default function BackendSection()
     let setCommand = useCommandStore((state) => state.setCommand)
    
 
-    let visitDoc = (doc: string) => {
+    let visitDoc = (doc: any) => {
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 

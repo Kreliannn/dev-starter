@@ -4,21 +4,37 @@ import InstallDesktopIcon from "@mui/icons-material/InstallDesktop"
 import MenuBookIcon from "@mui/icons-material/MenuBook"
 import CloudIcon from "@mui/icons-material/Cloud"
 import FeedbackIcon from "@mui/icons-material/Feedback"
-
+import Image from "next/image"
 export default function LandingPage() {
   return (
     <Container maxWidth="lg" className="py-12">
-      <header className="text-center mb-16">
-        <Typography variant="h1" className="text-4xl font-bold mb-4">
-          Dev Starter
-        </Typography>
-        <Typography variant="h2" className="text-xl text-gray-600 mb-8">
-          Simplify Your Development Setup
-        </Typography>
-        <Button variant="contained" color="primary" size="large" className="bg-black text-white hover:bg-gray-800">
-          Get Started
-        </Button>
-      </header>
+    <section className="flex flex-col md:flex-row items-center justify-between mb-16">
+        <div className="md:w-1/2 mb-8 md:mb-0">
+          <Typography variant="h1" className="text-4xl font-bold mb-4">
+            Dev Starter
+          </Typography>
+          <Typography variant="h2" className="text-xl text-gray-600 mb-4">
+            Simplify Your Development Setup
+          </Typography>
+          <Typography variant="body1" className="text-gray-800 mb-6">
+            Dev Starter is your one-stop solution for kickstarting development projects. We provide easy-to-use tools
+            and resources to streamline your setup process, allowing you to focus on what matters most - writing great
+            code.
+          </Typography>
+          <Button variant="contained" color="primary" size="large" className="bg-black text-white hover:bg-gray-800">
+            Get Started
+          </Button>
+        </div>
+        <div className="md:w-1/2 flex justify-center">
+          <Image
+            src="/placeholder.svg"
+            alt="Dev Starter Illustration"
+            width={500}
+            height={400}
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
 
       <main className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <FeatureSection
@@ -48,9 +64,9 @@ export default function LandingPage() {
   )
 }
 
-function FeatureSection({ icon, title, description }) {
+function FeatureSection({ icon, title, description }:any) {
   return (
-    <div className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg">
+    <div className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg drop-shadow-lg bg-stone-100">
       <div className="mb-4">{icon}</div>
       <Typography variant="h3" className="text-xl font-semibold mb-2">
         {title}
