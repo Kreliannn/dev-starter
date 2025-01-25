@@ -14,18 +14,6 @@ export const cdn = [
         `
     },
     {
-        img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png",
-        name : "tailwind",
-        description : `         
-           Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without having to write custom CSS. Unlike traditional CSS frameworks that offer predefined components, Tailwind gives you a collection of utility classes for controlling layout, spacing, typography, colors, and more, allowing you to design directly in HTML.
-        `,
-        documentation : "https://tailwindcss.com/docs/installation/using-vite",
-        cdn : `
-           <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-
-        `
-    },
-    {
         img : "https://rohit-chouhan.gallerycdn.vsassets.io/extensions/rohit-chouhan/sweetalert2-snippet/1.1.2/1625627316335/Microsoft.VisualStudio.Services.Icons.Default",
         name : "sweet alert 2",
         description : `
@@ -35,6 +23,18 @@ export const cdn = [
         cdn : `
             <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         `
+    },
+    {
+        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLME0hpAJOqBGhaVjcgkk8hIKS3S4GAqrLg&s",
+        name : "jQuery",
+        description : `      
+           jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, and animation, making it easier to work with JavaScript on websites.
+        `,
+        documentation : "https://jquery.com/",
+        cdn : `
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEJx3Xx8X2X4K5h8X8A6r4zw8oC6ebD7k8J7Hs6Ds6p4XG5m5F5OU5Xw5Xz5r" crossorigin="anonymous"></script>
+
+        `   
     },
     {
         img : "https://i0.wp.com/www.techfree.info/wp-content/uploads/2016/11/datatable-banner.png?fit=680%2C390&ssl=1",
@@ -62,6 +62,18 @@ export const cdn = [
         `   
     },
     {
+        img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png",
+        name : "tailwind",
+        description : `         
+           Tailwind CSS is a utility-first CSS framework that provides low-level utility classes to build custom designs without having to write custom CSS. Unlike traditional CSS frameworks that offer predefined components, Tailwind gives you a collection of utility classes for controlling layout, spacing, typography, colors, and more, allowing you to design directly in HTML.
+        `,
+        documentation : "https://tailwindcss.com/docs/installation/using-vite",
+        cdn : `
+           <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+
+        `
+    },
+    {
         img : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chart.js_logo.svg/1200px-Chart.js_logo.svg.png",
         name : "Chart.js",
         description : `      
@@ -70,18 +82,6 @@ export const cdn = [
         documentation : "https://www.chartjs.org/docs/latest/getting-started/integration.html",
         cdn : `
          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        `   
-    },
-    {
-        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmLME0hpAJOqBGhaVjcgkk8hIKS3S4GAqrLg&s",
-        name : "jQuery",
-        description : `      
-           jQuery is a fast, small, and feature-rich JavaScript library. It simplifies things like HTML document traversal and manipulation, event handling, and animation, making it easier to work with JavaScript on websites.
-        `,
-        documentation : "https://jquery.com/",
-        cdn : `
-         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEJx3Xx8X2X4K5h8X8A6r4zw8oC6ebD7k8J7Hs6Ds6p4XG5m5F5OU5Xw5Xz5r" crossorigin="anonymous"></script>
-
         `   
     },
     {
