@@ -10,27 +10,27 @@ export default function LandingPage() {
     <Container maxWidth="lg" className="py-12">
     <section className="flex flex-col md:flex-row items-center justify-between mb-16">
         <div className="md:w-1/2 mb-8 md:mb-0">
-          <Typography variant="h1" className="text-4xl font-bold mb-4">
+          <h1  className="text-4xl font-bold mb-4">
             Dev Starter
-          </Typography>
-          <Typography variant="h2" className="text-xl text-gray-600 mb-4">
+          </h1>
+          <h1  className="text-xl text-gray-600 mb-4">
             Simplify Your Development Setup
-          </Typography>
-          <Typography variant="body1" className="text-gray-800 mb-6">
+          </h1>
+          <h1  className="text-gray-800 mb-6">
             Dev Starter is your one-stop solution for kickstarting development projects. We provide easy-to-use tools
             and resources to streamline your setup process, allowing you to focus on what matters most - writing great
             code.
-          </Typography>
-          <Button variant="contained" color="primary" size="large" className="bg-black text-white hover:bg-gray-800">
+          </h1>
+          <button  className="bg-black text-white hover:bg-gray-800 p-2 rounded px-8 drop-shadow-lg">
             Get Started
-          </Button>
+          </button>
         </div>
         <div className="md:w-1/2 flex justify-center">
           <Image
-            src="/placeholder.svg"
+            src="/pic.jpg"
             alt="Dev Starter Illustration"
-            width={500}
-            height={400}
+            width={400}
+            height={300}
             className="rounded-lg shadow-lg"
           />
         </div>
