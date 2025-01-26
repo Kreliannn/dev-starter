@@ -7,7 +7,7 @@ import { initializeApp } from "firebase/app"
 import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore/lite"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyClpggSiin_WXHwlc0AM-jUiwZK_4DENHs",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
   authDomain: "test-c6a7a.firebaseapp.com",
   projectId: "test-c6a7a",
   storageBucket: "test-c6a7a.firebasestorage.app",
