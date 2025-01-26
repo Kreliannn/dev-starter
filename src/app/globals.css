@@ -4,8 +4,6 @@
 
 
 
-
-
 body {
 
   font-family: Arial, Helvetica, sans-serif;
@@ -14,3 +12,16 @@ body {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 } 
+
+.button {
+  @apply px-4 py-2 bg-black text-white rounded-lg hover:bg-stone-900 transition duration-300 ease-in-out;
+}
+
+.card {
+  @apply bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out;
+}
+
+/* Input Styles */
+.input {
+  @apply px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-black text-gray-700 placeholder-gray-500 bg-white transition duration-300 ease-in-out shadow-sm hover:shadow-md;
+}

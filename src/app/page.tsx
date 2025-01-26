@@ -5,33 +5,37 @@ import MenuBookIcon from "@mui/icons-material/MenuBook"
 import CloudIcon from "@mui/icons-material/Cloud"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
+import Link from "next/link"
+
 export default function LandingPage() {
+
+
+
   return (
     <Container maxWidth="lg" className="py-12">
     <section className="flex flex-col md:flex-row items-center justify-between mb-16">
         <div className="md:w-1/2 mb-8 md:mb-0">
-          <h1  className="text-4xl font-bold mb-4">
+          <h1  className="text-5xl font-bold mb-4">
             Dev Starter
           </h1>
-          <h1  className="text-xl text-gray-600 mb-4">
+          <h1  className="text-2xl text-gray-600 mb-4">
             Simplify Your Development Setup
           </h1>
-          <h1  className="text-gray-800 mb-6">
+          <h1  className="text-gray-800 mb-6 text-md">
             Dev Starter is your one-stop solution for kickstarting development projects. We provide easy-to-use tools
             and resources to streamline your setup process, allowing you to focus on what matters most - writing great
             code.
           </h1>
-          <button  className="bg-black text-white hover:bg-gray-800 p-2 rounded px-8 drop-shadow-lg">
-            Get Started
+          <button  className="button">
+            <Link href="/pages/commandGenerator" > Get Started </Link>
           </button>
         </div>
-        <div className="md:w-1/2 flex justify-center">
-          <Image
+        <div className="md:w-1/2 flex justify-end">
+          <img
             src="/pic.jpg"
             alt="Dev Starter Illustration"
-            width={400}
-            height={300}
-            className="rounded-lg shadow-lg"
+            className="rounded-lg shadow-lg w-96 h-96"
           />
         </div>
       </section>
@@ -93,8 +97,9 @@ function FeedbackSection() {
         size="large"
         startIcon={<FeedbackIcon />}
         className="border-black text-black hover:bg-gray-100"
+        
       >
-        Contact Us
+        <Link href="/pages/feedback" > Contact us </Link>
       </Button>
     </section>
   )

@@ -29,6 +29,9 @@ const Navbar = () => {
               <Link href="/pages/codeTemplate" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
                 Template
               </Link>
+              <Link href="/pages/feedback" className="hover:bg-stone-900 px-3 py-2 rounded-md text-sm font-medium">
+                Feedback
+              </Link>
             </div>
           </div>
           <div className="md:hidden">
@@ -80,6 +83,9 @@ const Navbar = () => {
           </Link>
           <Link href="/pages/codeTemplate" className="hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
           Template
+          </Link>
+          <Link href="/pages/feedback" className="hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium">
+          Feedback
           </Link>
           </div>
         </div>

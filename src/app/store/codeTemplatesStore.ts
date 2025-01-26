@@ -1,24 +1,21 @@
 import { create } from "zustand"
 
-
-
-type codes = {
-    express : string,
-    php : string
+type obj = {
+    name : string,
+    color : string,
+    code : string
 }
 
-type template = {
-    codes : codes,
-    initialValue : (data: codes) => void,
-    setExpress : (data: string) => void,
-    setPhp : (data: string) => void,
+type tempType = {
+    template : obj[],
+    initialValue : (data: obj[]) => void
 }
 
-let useCodeTemplateStore = create<template>((set) => ({
-    codes : { express : "", php : ""},
-    initialValue : (data: codes) => set((state) => ({ codes : data})),
-    setExpress : (data) => set((state) => ({ codes : {express : data, php : state.codes.php}})),
-    setPhp : (data) => set((state) => ({ codes : {express : state.codes.express , php : data}})),
+const useCodeTemplateStore = create<tempType>((set, get) => ({
+    template : [],
+    initialValue : (data) => set({ template : data})
 }))
+
+
 
 export default useCodeTemplateStore;
