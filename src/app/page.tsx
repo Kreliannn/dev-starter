@@ -68,12 +68,12 @@ function FeatureSection({ icon, title, description }:any) {
   return (
     <div className="flex flex-col items-center text-center p-6 border border-gray-200 rounded-lg drop-shadow-lg bg-stone-100">
       <div className="mb-4">{icon}</div>
-      <Typography variant="h3" className="text-xl font-semibold mb-2">
+      <h1  className=" font-semibold mb-2">
         {title}
-      </Typography>
-      <Typography variant="body1" className="text-gray-600">
+      </h1>
+      <h1  className="text-gray-600">
         {description}
-      </Typography>
+      </h1>
     </div>
   )
 }
@@ -81,15 +81,15 @@ function FeatureSection({ icon, title, description }:any) {
 function FeedbackSection() {
   return (
     <section className="mt-16 text-center">
-      <Typography variant="h2" className="text-2xl font-semibold mb-4">
+      <h1  className="text-2xl font-semibold mb-4">
         We Value Your Feedback
-      </Typography>
-      <Typography variant="body1" className="text-gray-600 mb-6">
+      </h1>
+      <h1 className="text-gray-600 mb-6">
         Have suggestions or concerns? We'd love to hear from you!
-      </Typography>
+      </h1>
       <Button
         variant="outlined"
-        color="primary"
+        color="inherit"
         size="large"
         startIcon={<FeedbackIcon />}
         className="border-black text-black hover:bg-gray-100"
