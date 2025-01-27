@@ -21,7 +21,7 @@ export default function DevDependecies()
     const setCommandDev = useCommandDevStore((state) => state.setCommandDev)
    
 
-    const visitDoc = (doc: any) => {
+    const visitDoc = (doc: string) => {
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 
