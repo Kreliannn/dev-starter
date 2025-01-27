@@ -109,5 +109,17 @@ export const cdnData = [
             <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
         `   
     },
+    {
+        img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vteG2DudlxILcIB8idhgX49HFuCk4_nEtQ&s",
+        name : "Gsap",
+        description : `      
+           GSAP (GreenSock Animation Platform) is a powerful JavaScript library used for creating high-performance animations. It allows you to animate HTML, CSS, and JavaScript objects with advanced timing, control, and smoothness. GSAP is known for its flexibility, performance, and compatibility with all modern browsers.
+        `,
+        documentation : "https://gsap.com/docs/v3/",
+        cdn : `
+            <!-- Gsap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+        `   
+    },
 ]
 

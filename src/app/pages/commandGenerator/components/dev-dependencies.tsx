@@ -3,15 +3,15 @@ import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
 import useCommandDevStore from "@/app/store/commandDevStore";
 
-let backend = [
-  { name : "typescript", command : "typescript", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png", documentation : ""},
-    { name : "nodemon", command : "nodemon", img : "https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png"},
-    { name : "eslint", command : "eslint", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNtywX99sgeYPkxEOMr1K2LAaTMeoEE_Ysg&s"},
-    { name : "ts-node", command : "ts-node", img : "https://images.seeklogo.com/logo-png/43/3/ts-node-logo-png_seeklogo-434981.png?v=1957829453043056632  "},
-    { name : "@types/ express", command : "cors", img : "https://media.licdn.com/dms/image/D5612AQEIyYUSSkS0Rg/article-cover_image-shrink_720_1280/0/1680742409585?e=2147483647&v=beta&t=zo2zYXAkLe4guONarPO89_GUvRCgdcoc1oLIPxNMVqE"},
-    { name : "@types/ react", command : "socket-io", img : "https://miro.medium.com/v2/resize:fit:800/0*CBjisl422hUyLxiG.png"},
-   
-  ]
+let dev = [
+  { name : "typescript", command : "typescript", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png", documentation : "https://www.typescriptlang.org/docs/" },
+  { name : "nodemon", command : "nodemon", img : "https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png", documentation : "https://github.com/remy/nodemon#nodemon"},
+  { name : "eslint", command : "eslint", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNtywX99sgeYPkxEOMr1K2LAaTMeoEE_Ysg&s", documentation : "https://eslint.org/docs/latest/use/getting-started"},
+  { name : "ts-node", command : "ts-node", img : "https://images.seeklogo.com/logo-png/43/3/ts-node-logo-png_seeklogo-434981.png?v=1957829453043056632",  documentation : "https://www.npmjs.com/package/ts-node"},
+  { name : "@types/ express", command : "@types/express", img : "https://media.licdn.com/dms/image/D5612AQEIyYUSSkS0Rg/article-cover_image-shrink_720_1280/0/1680742409585?e=2147483647&v=beta&t=zo2zYXAkLe4guONarPO89_GUvRCgdcoc1oLIPxNMVqE",  documentation : "https://www.npmjs.com/package/@types/express"},
+  { name : "@types/ react", command : "@types/react", img : "https://miro.medium.com/v2/resize:fit:800/0*CBjisl422hUyLxiG.png",  documentation : "https://www.npmjs.com/package/@types/react"},
+]
+
 
   
 export default function DevDependecies()
@@ -21,7 +21,9 @@ export default function DevDependecies()
     let setCommandDev = useCommandDevStore((state) => state.setCommandDev)
    
 
-
+    let visitDoc = (doc: any) => {
+      window.open(doc, '_blank', 'noopener noreferrer');
+    }
 
     let checkBox = (command: string): void => {
       setCommandDev(command)
@@ -36,11 +38,11 @@ export default function DevDependecies()
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar inset-shadow-sm" >
             {
-              backend.map((library) => {
+              dev.map((library) => {
                 return(
                 <div key={library.name} className="h-32 mt-2  overflow-hidden  rounded-[1vw] bg-white drop-shadow-lg">
-                  <div className="h-4/6   flex justify-center place-items-center hover:scale-125 transition">
-                      <img src={library.img}  style={{width : "60%", height : "60%"}} className=""/>
+                  <div className="h-4/6   flex justify-center place-items-center hover:scale-125 transition" >
+                      <img src={library.img}  style={{width : "60%", height : "60%"}} className="" onClick={() => visitDoc(library.documentation)} />
                   </div>
 
                   <div className="h-2/6   flex " style={{backgroundColor : "#F0F5F9"}}>

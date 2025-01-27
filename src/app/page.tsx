@@ -9,9 +9,33 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import gsap from "gsap"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
+
+import { initializeApp } from "firebase/app"
+import { getFirestore, collection, getDocs, addDoc } from "firebase/firestore/lite"
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
+  authDomain: "test-c6a7a.firebaseapp.com",
+  projectId: "test-c6a7a",
+  storageBucket: "test-c6a7a.firebasestorage.app",
+  messagingSenderId: "236410288126",
+  appId: "1:236410288126:web:ff00bd9636ad60e20772af",
+}
+
+const app = initializeApp(firebaseConfig)
+
+
+
+
+
+
+
+
 
 export default function LandingPage() {
+
+  let [visitCount, setVisitCount] = useState(0)
 
   let pic = useRef(null)
   let header1 = useRef(null)
@@ -21,11 +45,10 @@ export default function LandingPage() {
   let container = useRef(null)
   let view = useRef(null)
 
-  useEffect(() => {
+  useEffect(() => {    
+
     const timeline = gsap.timeline();
 
-
-    
     gsap.fromTo(
       pic.current,
       { x: 50, opacity: 0 },
@@ -73,6 +96,27 @@ export default function LandingPage() {
 
 
   }, []);
+
+
+  useEffect(() => {
+    
+    async function incrementVisitAndReturnVisitCount() {
+
+      const db = getFirestore(app)
+
+      await addDoc(collection(db, "visit"), {
+        visit: "visited",
+      })
+
+      const visit = collection(db, "visit")
+      const visitSnapshot = await getDocs(visit)
+      const visitCount = visitSnapshot.docs.length
+      setVisitCount(visitCount)
+    }
+
+    incrementVisitAndReturnVisitCount()
+
+  }, [])
   
 
   return (
@@ -104,8 +148,8 @@ export default function LandingPage() {
         </div>
       </section>
       
-      <div ref={view} className="w-full h-24 border border-gray-200 rounded-lg drop-shadow-lg bg-stone-100 mb-5 shadow flex place-items-center  drop-shadow-lg opacity-0">
-        <h1 className="text-3xl ms-5 font-bold text-stone-900"> Visit Count : 102</h1>
+      <div ref={view} className="w-full h-24 border bg-black mb-5 rounded-lg shadow flex place-items-center  drop-shadow-lg opacity-0">
+        <h1 className="text-3xl ms-5 font-bold text-stone-300 "> Visit Count : {visitCount}</h1>
       </div>
       <br /><br />
       

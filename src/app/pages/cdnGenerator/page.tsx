@@ -31,8 +31,8 @@ export default function CdnGenerator()
         <div>
             <br />
             <div className="m-auto border w-5/6 h-96 bg-gray-200 drop-shadow-lg">
-                <div className="m-auto border h-16 bg-black drop-shadow-lg">
-
+                <div className="m-auto border h-16 bg-black drop-shadow-lg flex place-items-center">
+                    <Typography variant="h4" className={`font-bold text-white  ms-3     `}> <strong> CDN </strong> </Typography>
                 </div>
                 <div className="h-80 overflow-auto bg-blue-100 grid grid-cols-1">
                     {
