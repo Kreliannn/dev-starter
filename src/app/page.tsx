@@ -18,14 +18,21 @@ export default function LandingPage() {
   let header2 = useRef(null)
   let header3 = useRef(null)
   let button = useRef(null)
+  let container = useRef(null)
+  let view = useRef(null)
+
   useEffect(() => {
     const timeline = gsap.timeline();
+
+
     
     gsap.fromTo(
       pic.current,
       { x: 50, opacity: 0 },
-      { x: -0, opacity: 1, duration: 1 }
+      { x: -0, opacity: 1, duration: 1.5 }
     )
+
+
 
     timeline
       .fromTo(
@@ -51,12 +58,25 @@ export default function LandingPage() {
         { x: -50, opacity: 0 },
         { x: 0, opacity: 1, duration: 1.5 },
         "-=1" // Starts earlier to sync with header3
+      )
+      .fromTo(
+        view.current,
+        { y : 50, opacity: 0 },
+        { y : 0, opacity: 1, duration: 1.5 },
+        "-=1" // Starts earlier to sync with header3
+      ).
+      fromTo(
+        container.current,
+        { opacity: 0 },
+        {  opacity: 1, duration: .5}
       );
+
+
   }, []);
   
 
   return (
-    <Container maxWidth="lg" className="py-12">
+    <Container maxWidth="lg" className="py-12 ">
     <section className="flex flex-col md:flex-row items-center justify-between mb-16">
         <div className="md:w-1/2 mb-8 md:mb-0">
           <h1 ref={header1} className="text-5xl font-bold mb-4 opacity-0">
@@ -83,8 +103,13 @@ export default function LandingPage() {
           />
         </div>
       </section>
-
-      <main className="grid grid-cols-1 md:grid-cols-2 gap-12">
+      
+      <div ref={view} className="w-full h-24 border border-gray-200 rounded-lg drop-shadow-lg bg-stone-100 mb-5 shadow flex place-items-center  drop-shadow-lg opacity-0">
+        <h1 className="text-3xl ms-5 font-bold text-stone-900"> Visit Count : 102</h1>
+      </div>
+      <br /><br />
+      
+      <main ref={container} className="grid grid-cols-1 md:grid-cols-2 gap-12 opacity-0">
         <FeatureSection
           icon={<CodeIcon fontSize="large" />}
           title="Copy-Paste Templates"

@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-whi` } style={{backgroundColor : "#F0F5F9"}}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-whi hide-scrollbar` } style={{backgroundColor : "#F0F5F9"}}
       >
         <Navbar />
         {children}

@@ -15,9 +15,10 @@ let backend = [
     { name : "SASS", command : "sass", img : "https://img1.daumcdn.net/thumb/C88x88@2x.fwebp.q85/?fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb3exXT%2Fbtq520gWvWE%2FWOE39eK7JkpXKr5qbcJKK1%2Fimg.png", documentation : ""},
     { name : "react router", command : "jwt", img : "https://static-00.iconduck.com/assets.00/react-router-icon-512x279-zswz065s.png", documentation : ""},
     { name : "framer motion", command : "multer  ", img : "https://cdn.worldvectorlogo.com/logos/framer-motion.svg", documentation : ""},
+    { name : "Gsap", command : "gsap  ", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vteG2DudlxILcIB8idhgX49HFuCk4_nEtQ&s", documentation : "https://gsap.com/cheatsheet"},
   ]
 
-
+  
 export default function FrontendSection()
 {
 
