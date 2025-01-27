@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
 import useCommandDevStore from "@/app/store/commandDevStore";
 
-let dev = [
+const dev = [
   { name : "typescript", command : "typescript", img : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png", documentation : "https://www.typescriptlang.org/docs/" },
   { name : "nodemon", command : "nodemon", img : "https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png", documentation : "https://github.com/remy/nodemon#nodemon"},
   { name : "eslint", command : "eslint", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNtywX99sgeYPkxEOMr1K2LAaTMeoEE_Ysg&s", documentation : "https://eslint.org/docs/latest/use/getting-started"},
@@ -18,14 +18,14 @@ export default function DevDependecies()
 {
 
    
-    let setCommandDev = useCommandDevStore((state) => state.setCommandDev)
+    const setCommandDev = useCommandDevStore((state) => state.setCommandDev)
    
 
-    let visitDoc = (doc: any) => {
+    const visitDoc = (doc: any) => {
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 
-    let checkBox = (command: string): void => {
+    const checkBox = (command: string): void => {
       setCommandDev(command)
     }
 

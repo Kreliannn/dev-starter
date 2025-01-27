@@ -6,7 +6,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook"
 import CloudIcon from "@mui/icons-material/Cloud"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
+
 import Link from "next/link"
 import gsap from "gsap"
 import { useRef, useEffect, useState } from "react"
@@ -139,10 +139,12 @@ export default function LandingPage() {
           </button>
         </div>
         <div className="md:w-1/2 flex justify-end">
-          <img
+         <Image
             ref={pic}
             src="/pic.jpg"
             alt="Dev Starter Illustration"
+            width={300}
+            height={400}
             className="rounded-lg shadow-lg w-96 h-96 opacity-0"
           />
         </div>

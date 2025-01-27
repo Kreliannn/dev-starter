@@ -2,7 +2,7 @@ import { Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
 
-let backend = [
+const frontend = [
   { name : "tailwind", command : "tailwindcss", img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png", documentation : "https://tailwindcss.com/docs/installation/using-vite" },
   { name : "bootstrap", command : "bootstrap", img : "https://ncarb.github.io/bootstrap/assets/img/bootstrap-stack.png", documentation : "https://getbootstrap.com/docs/4.1/getting-started/introduction/" },
   { name : "material ui", command : "@mui/material @emotion/react @emotion/styled", img : "https://pbs.twimg.com/profile_images/1798056830041788417/HIapkjDx_400x400.jpg", documentation : "https://mui.com/material-ui/getting-started/" },
@@ -22,13 +22,13 @@ export default function FrontendSection()
 {
 
    
-    let setCommand = useCommandStore((state) => state.setCommand)
+    const setCommand = useCommandStore((state) => state.setCommand)
    
-    let visitDoc = (doc: string) => {
+    const visitDoc = (doc: string) => {
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 
-    let checkBox = (command: string): void => {
+    const checkBox = (command: string): void => {
         setCommand(command)
     }
 
@@ -41,7 +41,7 @@ export default function FrontendSection()
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar " >
             {
-              backend.map((library) => {
+              frontend.map((library) => {
                 return(
                 <div key={library.name} className="h-32 mt-2  overflow-hidden  rounded-[1vw] bg-white drop-shadow-lg">
                   <div className="h-4/6   flex justify-center place-items-center hover:scale-125 transition" onClick={() => visitDoc(library.documentation)}>

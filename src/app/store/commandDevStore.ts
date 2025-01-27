@@ -6,7 +6,7 @@ type commandType = {
     getCommandDev : () => string
 }
 
-let useCommandDevStore = create<commandType>((set, get) => ({
+const useCommandDevStore = create<commandType>((set, get) => ({
     commandDev : [],
     setCommandDev : (data) => {
         set((state) => {
