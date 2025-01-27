@@ -1,5 +1,5 @@
 "use client"
-import { Button, Container, Typography } from "@mui/material"
+import { Button, Container } from "@mui/material"
 import CodeIcon from "@mui/icons-material/Code"
 import InstallDesktopIcon from "@mui/icons-material/InstallDesktop"
 import MenuBookIcon from "@mui/icons-material/MenuBook"
@@ -35,15 +35,15 @@ const app = initializeApp(firebaseConfig)
 
 export default function LandingPage() {
 
-  let [visitCount, setVisitCount] = useState(0)
+  const [visitCount, setVisitCount] = useState(0)
 
-  let pic = useRef(null)
-  let header1 = useRef(null)
-  let header2 = useRef(null)
-  let header3 = useRef(null)
-  let button = useRef(null)
-  let container = useRef(null)
-  let view = useRef(null)
+  const pic = useRef(null)
+  const header1 = useRef(null)
+  const header2 = useRef(null)
+  const header3 = useRef(null)
+  const button = useRef(null)
+  const container = useRef(null)
+  const view = useRef(null)
 
   useEffect(() => {    
 

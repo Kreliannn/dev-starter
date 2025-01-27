@@ -9,17 +9,17 @@ import { useState } from 'react';
 
 export default function CdnGenerator()
 {
-    let cdn = useCdnStore((state) => state.cdn)
-    let setCdn = useCdnStore((state) => state.setCdn)
-    let getCdn = useCdnStore((state) => state.getCdn)
+    const cdn = useCdnStore((state) => state.cdn)
+    const setCdn = useCdnStore((state) => state.setCdn)
+    const getCdn = useCdnStore((state) => state.getCdn)
 
-    let [isCopied, setIsCopied] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
 
-    let visitDoc = (doc: string) => {
+    const visitDoc = (doc: string) => {
         window.open(doc, '_blank', 'noopener noreferrer');
     }
 
-    let copy = (commandText : string) => {
+    const copy = (commandText : string) => {
         navigator.clipboard.writeText(commandText)
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1500)

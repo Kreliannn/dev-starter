@@ -11,7 +11,7 @@ type tempType = {
     initialValue : (data: obj[]) => void
 }
 
-const useCodeTemplateStore = create<tempType>((set, get) => ({
+const useCodeTemplateStore = create<tempType>((set) => ({
     template : [],
     initialValue : (data) => set({ template : data})
 }))

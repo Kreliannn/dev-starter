@@ -10,23 +10,23 @@ import { useState } from 'react';
 
 export default function CommandLine()
 {
-    let [isCopied, setIsCopied] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
     
-    let command = useCommandStore((state) => state.command)
-    let getCommand = useCommandStore((state) => state.getCommand)
+    const command = useCommandStore((state) => state.command)
+    const getCommand = useCommandStore((state) => state.getCommand)
 
-    let commandDev = useCommandDevStore((state) => state.commandDev)
-    let getCommandDev = useCommandDevStore((state) => state.getCommandDev)
+    const commandDev = useCommandDevStore((state) => state.commandDev)
+    const getCommandDev = useCommandDevStore((state) => state.getCommandDev)
     
-    let copy = (commandText : string) => {
+    const copy = (commandText : string) => {
         navigator.clipboard.writeText(printCommand(getCommand(), getCommandDev()))
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1500)
     }
 
-    let printCommand = (command: string, commandDev: string): string => {
-        let seperator = (command != "" && commandDev != "") ? "; npm install" : "";
-        let devDependecies = (commandDev != "") ? " --save-dev " : "";
+    const printCommand = (command: string, commandDev: string): string => {
+        const seperator = (command != "" && commandDev != "") ? "; npm install" : "";
+        const devDependecies = (commandDev != "") ? " --save-dev " : "";
         return "npm install " + command + seperator + devDependecies  + commandDev
     }
 

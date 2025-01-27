@@ -9,17 +9,17 @@ import { useState } from 'react';
 
 export default function CodeTemplate()
 {
-    let [isCopied, setIsCopied] = useState(false);
+    const [isCopied, setIsCopied] = useState(false);
 
-    let Template = useCodeTemplateStore((state) => state.template)
-    let initialValue = useCodeTemplateStore((state) => state.initialValue)
+    const Template = useCodeTemplateStore((state) => state.template)
+    const initialValue = useCodeTemplateStore((state) => state.initialValue)
    
     useEffect(() => {
         initialValue(tempaltesData)
 
     }, [])
 
-    let copy = (commandText : string) => {
+    const copy = (commandText : string) => {
         navigator.clipboard.writeText(commandText)
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1500)

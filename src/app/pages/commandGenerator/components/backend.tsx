@@ -3,7 +3,7 @@ import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
 
 
-let backend = [
+const backend = [
   { name : "express", command : "express", img : "https://img.icons8.com/color/512/express-js.png", documentation : "https://devdocs.io/express-getting-started/"},
   { name : "mongoose", command : "mongoose", img : "https://4008838.fs1.hubspotusercontent-na1.net/hubfs/4008838/mogoose-logo.png", documentation : "https://mongoosejs.com/docs/"},
   { name : "passport", command : "passport", img : "https://cdn.glitch.me/project-avatar/0d184ee3-fd8d-4b94-acf4-b4e686e57375.png", documentation : "https://www.passportjs.org/docs/"},
@@ -26,14 +26,14 @@ export default function BackendSection()
 {
     
    
-    let setCommand = useCommandStore((state) => state.setCommand)
+    const setCommand = useCommandStore((state) => state.setCommand)
    
 
-    let visitDoc = (doc: any) => {
+    const visitDoc = (doc: any) => {
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 
-    let checkBox = (command: string): void => {
+    const checkBox = (command: string): void => {
         setCommand(command)
     }
 
