@@ -8,8 +8,6 @@ const dev = [
   { name : "nodemon", command : "nodemon", img : "https://static-00.iconduck.com/assets.00/nodemon-icon-1800x2048-cec0ndk1.png", documentation : "https://github.com/remy/nodemon#nodemon"},
   { name : "eslint", command : "eslint", img : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNtywX99sgeYPkxEOMr1K2LAaTMeoEE_Ysg&s", documentation : "https://eslint.org/docs/latest/use/getting-started"},
   { name : "ts-node", command : "ts-node", img : "https://images.seeklogo.com/logo-png/43/3/ts-node-logo-png_seeklogo-434981.png?v=1957829453043056632",  documentation : "https://www.npmjs.com/package/ts-node"},
-  { name : "@types/ express", command : "@types/express", img : "https://media.licdn.com/dms/image/D5612AQEIyYUSSkS0Rg/article-cover_image-shrink_720_1280/0/1680742409585?e=2147483647&v=beta&t=zo2zYXAkLe4guONarPO89_GUvRCgdcoc1oLIPxNMVqE",  documentation : "https://www.npmjs.com/package/@types/express"},
-  { name : "@types/ react", command : "@types/react", img : "https://miro.medium.com/v2/resize:fit:800/0*CBjisl422hUyLxiG.png",  documentation : "https://www.npmjs.com/package/@types/react"},
 ]
 
 
