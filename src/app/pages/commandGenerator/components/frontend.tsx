@@ -2,7 +2,7 @@
 import { Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const frontend = [
   {  check : false, name : "tailwind", command : "tailwindcss", typescript :"", img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png", documentation : "https://tailwindcss.com/docs/installation/using-vite" },
@@ -24,15 +24,13 @@ const frontend = [
   
 export default function FrontendSection({ toggle } : { toggle: boolean })
 {
-   
+   const [libraries, setLibraries] = useState(frontend)
+
     const command = useCommandStore((state) => state.command)
     const setCommand = useCommandStore((state) => state.setCommand)
 
-    useEffect(() => {
-      frontend.forEach((item) => {
-        item.check = false
-      })
-    }, [command])
+    console.log(libraries)
+
     
    
     const visitDoc = (doc: string) => {
@@ -53,7 +51,7 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar " >
             {
-              frontend.map((library, index) => {
+              libraries.map((library, index) => {
                 return(
                 <div key={library.name} className="h-32 mt-2  overflow-hidden  rounded-[1vw] bg-white drop-shadow-lg">
                   <div className="h-4/6   flex justify-center place-items-center hover:scale-125 transition" onClick={() => visitDoc(library.documentation)}>
@@ -66,14 +64,20 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox 
-                         onChange={(e) => {
-                          checkBox(library.command, library.typescript)
-                          frontend[index].check = !frontend[index].check
-                         }} 
-                         checked={library.check} 
-                         color="default"
-                        />
+                      <Checkbox 
+                        onChange={(e) => {
+                          checkBox(library.command, library.typescript);
+
+                          setLibraries((prevLibraries) => 
+                            prevLibraries.map((item, i) => 
+                              i === index ? { ...item, check: e.target.checked } : item
+                            )
+                          );
+                        }} 
+                        checked={library.check} 
+                        color="default"
+                      />
+
                       </div>
                   </div>
                 </div>
