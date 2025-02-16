@@ -44,7 +44,7 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
                 onChange={(e) => {
                     setToggle(e.target.checked)
                     clearCommand()
-                    router.refresh()
+                    window.location.reload()
                 }}
                 color="primary" 
             />
