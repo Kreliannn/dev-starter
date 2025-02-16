@@ -5,10 +5,13 @@ import {Typography,Switch, Button} from "@mui/material";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import CheckIcon from '@mui/icons-material/Check';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 
 export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, setToggle :React.Dispatch<React.SetStateAction<boolean>> } )
 {
+    const router = useRouter()
+
     const [isCopied, setIsCopied] = useState(false);
     
     const command = useCommandStore((state) => state.command)
@@ -41,6 +44,7 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
                 onChange={(e) => {
                     setToggle(e.target.checked)
                     clearCommand()
+                    router.refresh()
                 }}
                 color="primary" 
             />
