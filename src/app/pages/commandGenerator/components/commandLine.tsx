@@ -13,6 +13,7 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
     
     const command = useCommandStore((state) => state.command)
     const getCommand = useCommandStore((state) => state.getCommand)
+    const clearCommand = useCommandStore((state) => state.clearCommand)
 
     const commandDev = useCommandDevStore((state) => state.commandDev)
     const getCommandDev = useCommandDevStore((state) => state.getCommandDev)
@@ -22,6 +23,8 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
         setIsCopied(true)
         setTimeout(() => setIsCopied(false), 1500)
     }
+
+   
 
     const printCommand = (command: string, commandDev: string): string => {
         const seperator = (command != "" && commandDev != "") ? "; npm install" : "";
@@ -33,7 +36,14 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
         <div className='w-11/12  drop-shadow-lg fixed rounded overflow-hidden  ' style={{bottom : "3%", left: "3%"}}>
             <div className="container-fluid bg-black flex justify-end h-12 ">
             
-            <Switch checked={toggle} onChange={(e) => setToggle(e.target.checked)} color="primary" />
+            <Switch 
+                checked={toggle} 
+                onChange={(e) => {
+                    setToggle(e.target.checked)
+                    clearCommand()
+                }}
+                color="primary" 
+            />
 
             <div className='flex justify-center place-items-center text-white gap-1  scale-75 hover:bg-stone-900 p-5 rounded' style={{transition : ".5s"}} onClick={() => copy(getCommand())}>
                 {(isCopied) ? <CheckIcon /> : <ContentCopyIcon /> }

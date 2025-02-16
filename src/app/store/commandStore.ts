@@ -3,7 +3,8 @@ import { create } from "zustand";
 type commandType = {
     command : string[],
     setCommand : (data: string) => void,
-    getCommand : () => string
+    getCommand : () => string,
+    clearCommand : () => void
 }
 
 const useCommandStore = create<commandType>((set, get) => ({
@@ -21,7 +22,8 @@ const useCommandStore = create<commandType>((set, get) => ({
             }
         })  
     },
-    getCommand : () =>  get().command.join(" ")
+    getCommand : () =>  get().command.join(" "),
+    clearCommand : () => set(() => ({ command : []}))
     
 })) 
 
