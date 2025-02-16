@@ -20,7 +20,7 @@ const frontend = [
 
 
   
-export default function FrontendSection()
+export default function FrontendSection({ toggle } : { toggle: boolean })
 {
 
    
@@ -32,7 +32,7 @@ export default function FrontendSection()
 
     const checkBox = (command: string, typescript : string): void => {
         setCommand(command)
-        if(true) setCommand(typescript)
+        if(toggle) setCommand(typescript)
     }
 
 
