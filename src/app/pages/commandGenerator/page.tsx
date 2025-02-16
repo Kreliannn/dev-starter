@@ -15,7 +15,7 @@ export default function Home() {
    
       <br /> <br /> 
       <div className='container  m-auto grid grid-cols- gap-5 sm:grid-cols-3'>
-        <BackendSection />
+        <BackendSection toggle={typeToggle} />
         <FrontendSection toggle={typeToggle} />
         <DevDependecies />
       </div>

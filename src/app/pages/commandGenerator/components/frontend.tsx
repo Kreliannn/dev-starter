@@ -31,6 +31,9 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
 
     console.log(libraries)
 
+    useEffect(() => {
+      setLibraries(frontend)
+    }, [toggle])
     
    
     const visitDoc = (doc: string) => {
