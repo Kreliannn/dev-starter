@@ -30,8 +30,9 @@ export default function FrontendSection()
       window.open(doc, '_blank', 'noopener noreferrer');
     }
 
-    const checkBox = (command: string): void => {
+    const checkBox = (command: string, typescript : string): void => {
         setCommand(command)
+        if(true) setCommand(typescript)
     }
 
 
@@ -56,7 +57,7 @@ export default function FrontendSection()
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox onChange={() => checkBox(library.command)} color="default"/>
+                        <Checkbox onChange={() => checkBox(library.command, library.typescript)} color="default"/>
                       </div>
                   </div>
                 </div>
