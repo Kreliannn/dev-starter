@@ -53,7 +53,7 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
 
           <div className=" w-11/12 m-auto h-5/6 grid grid-cols-3   gap-3 overflow-auto hide-scrollbar " >
             {
-              frontend.map((library) => {
+              frontend.map((library, index) => {
                 return(
                 <div key={library.name} className="h-32 mt-2  overflow-hidden  rounded-[1vw] bg-white drop-shadow-lg">
                   <div className="h-4/6   flex justify-center place-items-center hover:scale-125 transition" onClick={() => visitDoc(library.documentation)}>
@@ -66,7 +66,14 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox onChange={() => checkBox(library.command, library.typescript)} checked={library.check} color="default"/>
+                        <Checkbox 
+                         onChange={(e) => {
+                          checkBox(library.command, library.typescript)
+                          frontend[index].check = !frontend[index].check
+                         }} 
+                         checked={library.check} 
+                         color="default"
+                        />
                       </div>
                   </div>
                 </div>
