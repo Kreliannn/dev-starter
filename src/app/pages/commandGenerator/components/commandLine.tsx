@@ -44,7 +44,6 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
                 onChange={(e) => {
                     setToggle(e.target.checked)
                     clearCommand()
-                    window.location.reload()
                 }}
                 color="primary" 
             />

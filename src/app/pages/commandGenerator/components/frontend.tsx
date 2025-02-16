@@ -1,6 +1,8 @@
+"use client"
 import { Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import useCommandStore from "@/app/store/commandStore";
+import { useEffect } from "react";
 
 const frontend = [
   { name : "tailwind", command : "tailwindcss", typescript :"", img : "https://images.seeklogo.com/logo-png/35/1/tailwind-css-logo-png_seeklogo-354675.png", documentation : "https://tailwindcss.com/docs/installation/using-vite" },
@@ -22,9 +24,13 @@ const frontend = [
   
 export default function FrontendSection({ toggle } : { toggle: boolean })
 {
-
-   
+    let check = true
+    const command = useCommandStore((state) => state.command)
     const setCommand = useCommandStore((state) => state.setCommand)
+
+    useEffect(() => {
+
+    }, [command])
     
    
     const visitDoc = (doc: string) => {
@@ -58,7 +64,7 @@ export default function FrontendSection({ toggle } : { toggle: boolean })
                       </div>
 
                       <div className="w-3/12  flex justify-center place-items-center">
-                        <Checkbox onChange={() => checkBox(library.command, library.typescript)} color="default"/>
+                        <Checkbox onChange={() => checkBox(library.command, library.typescript)} checked={check} color="default"/>
                       </div>
                   </div>
                 </div>
