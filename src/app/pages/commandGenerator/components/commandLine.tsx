@@ -52,7 +52,7 @@ export default function CommandLine({ toggle ,setToggle } : { toggle : boolean, 
                             clearCommand()
                         }}
                         color="primary" 
-                        className='bg-stone-300 rounded'
+                        className='bg-gradient-to-r from-yellow-500 to-blue-500 rounded'
                     />
                     <img 
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
