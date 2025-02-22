@@ -179,6 +179,24 @@ dist/
 Thumbs.db
 `
 
+const tsconfig = `
+{
+  "compilerOptions": {
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "rootDir": "./",                                  /* Specify the root folder within your source files. */
+    "outDir": "dist",                                   /* Specify an output folder for all emitted files. */
+    "esModuleInterop": true,                             /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
+    "forceConsistentCasingInFileNames": true,            /* Ensure that casing is correct in imports. */
+    "strict": true,                                      /* Enable all strict type-checking options. */
+    "noImplicitAny": true,                            /* Enable error reporting for expressions and declarations with an implied 'any' type. */
+    "strictNullChecks": true,                         /* When type checking, take into account 'null' and 'undefined'. */
+    "strictFunctionTypes": true,                      /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
+    "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
+  }
+}
+`
+
  export const tempaltesData = [
     {
         name : "express",
@@ -214,7 +232,12 @@ Thumbs.db
       name : "gitignore",
       color : "text-orange-600",
       code : gitignore
-  },
+    },
+    {
+      name : "tsConfig",
+      color : "text-bluee-500",
+      code : tsconfig
+    },
 ]
 
 
