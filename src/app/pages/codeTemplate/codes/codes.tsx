@@ -235,7 +235,7 @@ const tsconfig = `
     },
     {
       name : "tsConfig",
-      color : "text-bluee-500",
+      color : "text-blue-500",
       code : tsconfig
     },
 ]

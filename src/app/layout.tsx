@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cmd Builder",
+  title: "Dev Starter",
   description: "",
 };
 
