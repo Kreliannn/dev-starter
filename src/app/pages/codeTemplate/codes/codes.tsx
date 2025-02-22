@@ -62,8 +62,10 @@ if(array_key_exists($uri, $routes))
     echo 'page not found';
 }
 
-//.htaccess codes
-/*
+
+`
+
+const htaccess = `
 # Enable Rewrite Engine
 RewriteEngine On
 
@@ -71,8 +73,6 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [L]
-*/
-
 `
 
 const node = `
@@ -154,6 +154,31 @@ body {
 }
 `
 
+const gitignore = `
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+
+# Logs
+logs
+*.log
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+
+# Build
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+`
+
  export const tempaltesData = [
     {
         name : "express",
@@ -165,6 +190,11 @@ body {
         color : "text-purple-600",
         code : php
     },
+    {
+      name : ".htaccess",
+      color : "text-stone-300",
+      code : htaccess
+  },
     {
         name : "node js",
         color : "text-green-600",
@@ -180,6 +210,11 @@ body {
         color : "text-blue-500",
         code : css
     },
+    {
+      name : "gitignore",
+      color : "text-orange-600",
+      code : gitignore
+  },
 ]
 
 
