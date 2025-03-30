@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Developer Setup Helper
 
-## Getting Started
+A web-based tool designed to simplify the environment setup process for developers by providing automated command generation, CDN links, code templates, and a feedback section.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **📜 Terminal Command Generator** – Select dependencies for frontend, backend, and dev tools, and get an automatic `npm install` command.
+- **🌐 CDN Link Generator** – Generate script tags for selected libraries without manually visiting documentation.
+- **📝 Code Templates** – Access ready-to-use configurations like server setup (Node.js, Express, PHP), TypeScript configs, `.gitignore`, `.htaccess`, and more.
+- **📩 Feedback System** – Users can send messages to request additional dependencies or report issues.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📸 Preview  
+![Image](https://github.com/user-attachments/assets/14d9e39a-2938-4011-b867-394fa8f591f0)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+![Image](https://github.com/user-attachments/assets/6595ba61-9a54-4907-8ea4-e834f98b2a7d)
 
-## Learn More
+![Image](https://github.com/user-attachments/assets/bd267f1f-778d-4b67-8158-53cc31d5af46)
 
-To learn more about Next.js, take a look at the following resources:
+![Image](https://github.com/user-attachments/assets/b1dcd1e9-4758-49ed-a1f1-0d9ae2f71803)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Image](https://github.com/user-attachments/assets/483e0b21-d0e1-4160-aa76-9b57f988f122)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Image](https://github.com/user-attachments/assets/7b86fe20-d52b-4bf6-988e-71349d36324a)
 
-## Deploy on Vercel
+![Image](https://github.com/user-attachments/assets/f5c4bada-291f-479c-a636-6ba46af7f339)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
